@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/main.css" rel="stylesheet">
+    <!-- 郵便番号自動入力ライブラリ -->
+    <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+    <title>Form</title>
+</head>
+
+<body>
+    <div class="container mx-auto py-12">
+
+        <form action="" class="p-6 border rounded-md grid grid-cols-1 gap-5 mx-auto lg:w-1/2">
+            <h2 class="text-2xl font-bold">Tailwind テストフォームデザイン1</h2>
+            <label class="block">
+                <span class="text-lg font-bold pr-1">お名前</span>
+                <span class="bg-brightRed rounded-md p-1 text-white text-sm font-bold">必須</span>
+                <input type="text" class="mt-2 form-input px-4 py-3 border-gray-300 w-full rounded-md shodow-sm"
+                    autocomplete="name" placeholder="例：テスト太郎">
+            </label>
+
+            <label class="block">
+                <span class="text-lg font-bold pr-1">お名前(カナ)</span>
+                <span class="bg-gray-400 rounded-md p-1 text-white text-sm font-bold">任意</span>
+                <input type="text" class="mt-2 form-input px-4 py-3 border-gray-300 w-full rounded-md"
+                    autocomplete="name" placeholder="例：テスト太郎">
+            </label>
+
+            <label class="block">
+                <span class="text-lg font-bold pr-1">メールアドレス</span>
+                <span class="bg-brightRed rounded-md p-1 text-white text-sm font-bold">必須</span>
+                <input type="email" class="mt-2 form-input px-4 py-3 border-gray-300 w-full rounded-md shodow-sm"
+                    autocomplete="email" placeholder="例：example@example.com">
+            </label>
+
+            <label class="block">
+                <span class="text-lg font-bold pr-1">電話番号</span>
+                <span class="bg-brightRed rounded-md p-1 text-white text-sm font-bold">必須</span>
+                <input type="tel" class="mt-2 form-input px-4 py-3 border-gray-300 w-full rounded-md shodow-sm"
+                    autocomplete="tel" placeholder="例：080-0000-0000">
+            </label>
+
+            <div class="block">
+                <span class="text-lg font-bold pr-1">ご住所</span>
+                <span class="bg-brightRed rounded-md p-1 text-white text-sm font-bold">必須</span>
+                <div class="h-adr">
+                    <span class="p-country-name" style="display:none;">Japan</span>
+                    <div class="flex flex-col mt-4 md:flex-row">
+                        <label class="block">
+                            <span class="">郵便番号</span>
+                            <input type="postcode"
+                                class="p-postal-code block rounded-md mt-2 form-input px-4 py-3 border-gray-300 mr-4 w-full md:w-44"
+                                autocomplete="postal-code" placeholder="例：123-4567">
+                        </label>
+                        <label class="block mt-3 md:mt-0">
+                            <span class="">都道府県</span>
+                            <select
+                                class="p-region-id block rounded-md mt-2 form-input px-4 py-3 border-gray-300 w-full md:w-44">
+                                <option value="">---</option>
+                                <option value="1">北海道</option>
+                                <option value="2">青森県</option>
+                                <option value="3">岩手県</option>
+                                <option value="4">宮城県</option>
+                                <option value="5">秋田県</option>
+                                <option value="6">山形県</option>
+                                <option value="7">福島県</option>
+                                <option value="8">茨城県</option>
+                                <option value="9">栃木県</option>
+                                <option value="10">群馬県</option>
+                                <option value="11">埼玉県</option>
+                                <option value="12">千葉県</option>
+                                <option value="13">東京都</option>
+                                <option value="14">神奈川県</option>
+                                <option value="15">新潟県</option>
+                                <option value="16">富山県</option>
+                                <option value="17">石川県</option>
+                                <option value="18">福井県</option>
+                                <option value="19">山梨県</option>
+                                <option value="20">長野県</option>
+                                <option value="21">岐阜県</option>
+                                <option value="22">静岡県</option>
+                                <option value="23">愛知県</option>
+                                <option value="24">三重県</option>
+                                <option value="25">滋賀県</option>
+                                <option value="26">京都府</option>
+                                <option value="27">大阪府</option>
+                                <option value="28">兵庫県</option>
+                                <option value="29">奈良県</option>
+                                <option value="30">和歌山県</option>
+                                <option value="31">鳥取県</option>
+                                <option value="32">島根県</option>
+                                <option value="33">岡山県</option>
+                                <option value="34">広島県</option>
+                                <option value="35">山口県</option>
+                                <option value="36">徳島県</option>
+                                <option value="37">香川県</option>
+                                <option value="38">愛媛県</option>
+                                <option value="39">高知県</option>
+                                <option value="40">福岡県</option>
+                                <option value="41">佐賀県</option>
+                                <option value="42">長崎県</option>
+                                <option value="43">熊本県</option>
+                                <option value="44">大分県</option>
+                                <option value="45">宮崎県</option>
+                                <option value="46">鹿児島県</option>
+                                <option value="47">沖縄県</option>
+                            </select>
+                        </label>
+                    </div>
+                    <label class="block mt-3 md:mt-4">
+                        <span class="pt-6">市町村区</span>
+                        <input type="text"
+                            class="p-locality p-street-address p-extended-address block rounded-md mt-2 form-input px-4 py-3 w-full border-gray-300"
+                            placeholder="例：大阪市浪速区難波西">
+                        <p id="helper-address-explanation" class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                            郵便番号を入力すると
+                            番地までのご住所が自動的に入力されますが、番地以降のご住所の記入漏れにご注意ください。</p>
+                    </label>
+                    <label class="block mt-4">
+                        <span class="">番地以降</span>
+                        <input type="text"
+                            class="p-locality p-street-address p-extended-address block rounded-md mt-2 form-input px-4 py-3 w-full border-gray-300"
+                            placeholder="例：1丁目1-1-1 ○○マンション101">
+                    </label>
+                </div>
+            </div>
+
+            <label class="block">
+                <span class="text-lg font-bold pr-1">サービスのご利用ははじめてですか？</span>
+                <span class="bg-gray-400 rounded-md p-1 text-white text-sm font-bold">任意</span>
+                <div class="flex flex-col mt-4 space-y-2">
+                    <div class=""><input type="radio" class="form-radio mr-2" name="radio1">はい</div>
+                    <div class=""><input type="radio" class="form-radio mr-2" name="radio1">いいえ</div>
+                </div>
+            </label>
+
+            <div class="block">
+                <div class="mt-2">
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" class="
+                          rounded
+                          bg-gray-200
+                          border-transparent
+                          focus:border-transparent focus:bg-gray-200
+                          text-gray-700
+                          focus:ring-1 focus:ring-offset-2 focus:ring-gray-500
+                        " checked />
+                        <span class="ml-2">お得な情報や新情報のメールの受け取りを希望する</span>
+                    </label>
+                </div>
+            </div>
+
+        </form>
+
+
+        <form action="" class="p-6 border-blue-500 rounded-md grid grid-cols-1 gap-4 mx-auto lg:w-1/2 mt-24">
+            <h2 class="text-2xl font-bold">Tailwindフォームデザイン2</h2>
+
+            <label class="block mt-4">
+                <div class="bg-gray-200 py-2 px-2">
+                    <span class="text-lg font-bold pr-1">お名前</span>
+                    <span class="bg-brightRed rounded-md p-1 text-white text-sm font-bold">必須</span>
+                </div>
+                <input type="text"
+                    class="p-locality p-street-address p-extended-address block rounded-md mt-3 form-input px-4 py-3 w-full border-gray-300"
+                    placeholder="例：テスト太郎">
+            </label>
+
+            <label class="block mt-4">
+                <div class="bg-gray-200 py-2 px-2">
+                    <span class="text-lg font-bold pr-1">お名前(カナ)</span>
+                    <span class="bg-gray-400 rounded-md p-1 text-white text-sm font-bold">任意</span>
+                </div>
+                <input type="text"
+                    class="p-locality p-street-address p-extended-address block rounded-md mt-3 form-input px-4 py-3 w-full border-gray-300"
+                    placeholder="例：テストタロウ">
+            </label>
+
+            <label class="flex-row mt-4">
+                <div class="bg-gray-200 py-2 px-2">
+                    <span class="text-lg font-bold pr-1">メールアドレス</span>
+                    <span class="bg-brightRed rounded-md p-1 text-white text-sm font-bold">必須</span>
+                </div>
+                <input type="email"
+                    class="p-locality p-street-address p-extended-address block rounded-md mt-3 form-input px-4 py-3 w-full border-gray-300"
+                    placeholder="例：example@example.com" autocomplete="email">
+            </label>
+
+            <label class="block mt-4">
+                <div class="bg-gray-200 py-2 px-2">
+                    <span class="text-lg font-bold pr-1">電話番号</span>
+                    <span class="bg-brightRed rounded-md p-1 text-white text-sm font-bold">必須</span>
+                </div>
+                <input type="tel"
+                    class="p-locality p-street-address p-extended-address block rounded-md mt-3 form-input px-4 py-3 w-full border-gray-300"
+                    placeholder="例：080-0000-0000" autocomplete="tel">
+            </label>
+        </form>
+
+        <form action="" class="p-6 border-blue-500 rounded-md grid grid-cols-1 gap-6 mx-auto lg:w-1/2 mt-24">
+            <h2 class="text-2xl font-bold">Tailwindフォームデザイン3</h2>
+
+            <label class="block mt-4">
+                <span class="text-gray-700 font-bold">お名前</span>
+                <span class="text-brightRed">*</span>
+                <input type="text" class="
+                      mt-0
+                      block
+                      w-full
+                      px-0.5
+                      border-0 border-b-2 border-gray-200
+                      focus:ring-0 focus:border-blue-700
+                    " placeholder="テスト太郎" autocomplete="name" />
+            </label>
+
+            <label class="block">
+                <span class="text-gray-700 font-bold">お名前(カナ)</span>
+                <span class="text-brightRed">*</span>
+                <input type="text" class="
+                      mt-0
+                      block
+                      w-full
+                      px-0.5
+                      border-0 border-b-2 border-gray-200
+                      focus:ring-0 focus:border-blue-700
+                    " placeholder="テストタロウ" />
+            </label>
+
+            <label class="block">
+                <span class="text-gray-700 font-bold">電話番号</span>
+                <span class="text-brightRed">*</span>
+                <input type="tel" class="
+                      mt-0
+                      block
+                      w-full
+                      px-0.5
+                      border-0 border-b-2 border-gray-200
+                      focus:ring-0 focus:border-blue-700
+                    " placeholder="080-0000-0000" autocomplete="tel" />
+            </label>
+
+            <label class="block">
+                <span class="text-gray-700 font-bold">メールアドレス</span>
+                <span class="text-brightRed">*</span>
+                <input type="email" class="
+                      mt-0
+                      block
+                      w-full
+                      px-0.5
+                      border-0 border-b-2 border-gray-200
+                      focus:ring-0 focus:border-blue-700
+                    " placeholder="example@example.com" autocomplete="email" />
+            </label>
+            <label class="block">
+                <span class="text-gray-700 font-bold">ご希望の予約日</span>
+                <input type="date" class="
+                      mt-0
+                      block
+                      w-full
+                      px-0.5
+                      border-0 border-b-2 border-gray-200
+                      focus:ring-0 focus:border-blue-700 text-gray-700
+                    " />
+            </label>
+            <label class="block">
+                <span class="text-gray-700 font-bold">ご希望のメニュー</span>
+                <select class="
+                      block
+                      w-full
+                      mt-0
+                      px-0.5
+                      border-0 border-b-2 border-gray-200
+                      focus:ring-0 focus:border-blue-700 text-gray-700
+                    ">
+                    <option>選択してください</option>
+                    <option>Aコース</option>
+                    <option>Bコース</option>
+                    <option>Cコース</option>
+                </select>
+            </label>
+            <label class="block">
+                <span class="text-gray-700  font-bold">ご要望などあれば記入してください</span>
+                <textarea class="
+                      mt-0
+                      block
+                      w-full
+                      px-0.5
+                      border-0 border-b-2 border-gray-200
+                      focus:ring-0 focus:border-blue-700
+                    " rows="2"></textarea>
+            </label>
+        </form>
+    </div>
+
+    </div>
+</body>
+
+</html>
